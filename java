@@ -1,13 +1,16 @@
 pipeline {   
- agent any
- customWorkspace "/mnt/dta"
- 
+ agent  {
+      label {       
+		 label "build-in"
+         customWorkspace "/mnt/data"
+            }
+        }			
   stages{
     stage('frist'){
         steps{
           sh "yum install httpd -y "
-	     } 
-		  }
+		      } 
+			      }
 				  
 	stage('second'){
         steps{
