@@ -1,13 +1,13 @@
 pipeline {   
  agent any
- customWorkspace "/mnt/data"
+ customWorkspace "/mnt/dta"
  
   stages{
     stage('frist'){
         steps{
           sh "yum install httpd -y "
-		      } 
-			      }
+	     } 
+		  }
 				  
 	stage('second'){
         steps{
