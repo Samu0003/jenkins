@@ -9,21 +9,17 @@ pipeline {
     stage('frist'){
         steps{
           sh "yum install httpd -y "
+	  sh "service httpd start"
 		      } 
 			      }
 				  
 	stage('second'){
         steps{
-          sh "cp -r index.html /var/www/html"
+          sh "echo 'hello' << /var/www/html"
 		  sh "chmod - R 777 /var/www/html/index.html"
 		      } 
 			      }
-				  
-    stage('third'){
-        steps{
-          sh "servcie httpd restart "
-		      } 
-			      }
+	
 
 
                   }
