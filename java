@@ -1,6 +1,6 @@
 pipeline {   
  agent any
- customWorkspace '/mnt/data'
+ customWorkspace "/mnt/data"
  
   stages{
     stage('frist'){
